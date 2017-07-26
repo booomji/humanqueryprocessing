@@ -23,70 +23,13 @@ Overview
 * Ask students to figure out the most popular female chat recipients and how many people snap her
 * Try different plans, execution strategies, and data layouts that are translated into english steps
 
-        SELECT name, count(*)
-        FROM chats
-        WHERE gender = Female
-        GROUP BY name
-        ORDER BY count DESC
-        LIMIT 1
-
-* Each team has a minute to strategize how to run the algorithms
-
-        Single thread, row oriented
-
-        1. filter by gender = Female
-        2. figure out the distinct names
-        3. for each name
-          4. count
-        5. sort by count desc
-        6. pick the first
-
-
-        Single thread, row oriented, better
-
-        1. filter by gender = Female
-        3. build hash table of name, count
-        4. read through the counts and remember the biggest one
-
-
-        5-threads, row oriented, better
-
-        0. give each student 1/5 of the pages
-        1. run single threaded, row oriented
-
-
-        10-threads, row oriented, thread contention
-
-        0. give each student 1/5 of the pages
-        1. run single threaded, row oriented
-
-
-        Col oriented
-
-        0. print page for each column
-        1. filter by gender = Female
-        2. build hash table of name, count
-        3. pick biggest one
-
-        Col oriented, partition by gender
-
-        0. print page for each column
-        1. filter by gender = Female
-        2. build hash table of name, count
-        3. pick biggest one
-
- 
-        Indexed by name --> chats
-
-        1. filter by gender = Female
-        2. for each name, lookup in index and count number of entries
-        3. keep track of biggest count
-
-* See data in data.csv
-
         SELECT extract(decade from year), count(*)
         FROM people
         WHERE gender = 'female'
         GROUP BY extract(decade from year)
         ORDER BY count(*)
         LIMIT 1
+
+* See [instructions.html](instructions.html) for each query execution strategy
+* See [realdata/](./realdata/) to see the data sheets using real data from [data.csv](./data.csv)
+* See [fakedata/](./fakedata/) to see the data sheets using made-up data for students to get aquainted with the instructions.
