@@ -31,5 +31,5 @@ Overview
         LIMIT 1
 
 * See [instructions.html](instructions.html) for each query execution strategy
-* See [realdata/](./realdata/) to see the data sheets using real data from [data.csv](./data.csv)
-* See [fakedata/](./fakedata/) to see the data sheets using made-up data for students to get aquainted with the instructions.
+* See [fakedata/](./fakedata/) for data sheets using made-up data for students to get aquainted with the instructions.
+* See [realdata/](./realdata/) for data sheets using real data from [data.csv](./data.csv)
