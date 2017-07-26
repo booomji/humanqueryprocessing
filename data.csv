@@ -30,11 +30,11 @@ id,birthyear,name,gender,description
 29,1976,window snyder,female,Former Chief Security Something-Or-Other at Mozilla
 30,1964,leland d melvin,male,Astronaut; only human to catch a pass in the NFL and in space.
 31,1993,aaron cook,male,first standing double backflip
-32,0830,al-khwarizmi,male,invented the term "algorithm"
+32,0830,al-khwarizmi,male,invented the term 'algorithm'
 33,1847,george boole,male,invented boolean logic; basis of computers
 34,1923,edgar codd,male,invented foundations of databases
 35,1925,douglas engelbart,male,invented computer mouse
-36,1937,claude shannon,male,invented the "bit"; defined "information"
+36,1937,claude shannon,male,invented the 'bit'; defined 'information'
 37,1912,alan turing,male,founder of computer science and AI
 38,1820,florence nighttingale,female,founded modern nursing; statistician
 39,1878,lise meitner,female,discovered nuclear fission (splitting atoms)
