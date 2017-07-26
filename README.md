@@ -1,16 +1,26 @@
 # Human query processing
 
-1. Ask what students know about computer science or data science
+This directory contains some notes and exercises to introduce database ideas to non-technical students (e.g., high school students).
+The exercises ask groups of students to manually execute a simple database query by hand; each group gets different instructions that correspond to
+different execution optimizations such as columnar data layouts, indexes, multi-threading.
+The [data](https://github.com/cudbg/humanqueryprocessing/blob/master/data.csv) is a hand created set of mainly female and under-represented scientists.
+
+This is part of [Columbia Engineering’s Inside Engineering program](https://outreach.engineering.columbia.edu/content/home), which introduces computer science and database research topics to local k-12 schools.
+
+Discussion Notes
+
+1. Beginning: Ask what students know about computer science or data science
   * How is it used in the world?
-  * Give some examples. Start a sneaker company, get endorsements from cool scientists.  How do you sell the sneakers?
+  * Discussion centered around starting a sneaker company.   What can computer science help with?  Eventually steer towards needs to run database queries.
+    * Start a sneaker company, get endorsements from cool scientists.  How do you sell the sneakers?
     * go door to door?
     * sell online?  how do people know about you?
     * advertise?  To who?  Should you give discounts? to who?
     * who's even buying the sneakers?   steph curries vs lebrons.
       * east vs west coast?  how do you know?
-      * advertise curries to east coasters?
-      * maybe there's curry fans in cleveland?  
-2. How do you make it fast?  exercise
+      * advertise curries to east coasters? maybe there's curry fans in cleveland?  
+2. Counting and asking questions is important.  But how can we make it fast?  exercise below
+3. Post-exercise discussion
 
 # Exercise
 
