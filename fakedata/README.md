@@ -1,8 +1,12 @@
 Directory of data sheets
 
-* [column-oriented data layout](./data-col.html)
-* [row-oriented data layout](./data-row.html)
-* [row-oriented data layout (sorted)](./data-row-sorted.html)
-* [Index on gender, decade](./data-index.html)
-* [counters scratch sheet](./data-counts.html)
-* [decades scratch sheet](./data-decade.html)
+* [Single Thread, Row Oriented](./data-row-singlethread.html)
+* [Single Thread, Row Oriented (version 2)](./data-row-singlethreadv2.html)
+* [5 Threads, Row Oriented (version 2)](./data-row-05thread.html)
+* [10 Threads, Row Oriented (version 2)](./data-row-10thread.html)
+* [Single Thread, Row Oriented, Index](./data-row-index.html)
+* [Single Thread, Row Oriented, Sorted on Gender and Birthyear](./data-row-sorted.html)
+* [Single thread, Col Oriented](./data-col.html)
+* [Index Data Sheet](./data-index.html)
+* [Decades Scratch Sheet](./data-decade.html)
+* [Counters Scratch Sheet](./data-counts.html)

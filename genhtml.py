@@ -4,7 +4,9 @@ from jinja2 import Template
 random.seed(0)
 
 
+tablenames = []
 def write_tables(fname, title, tables, template):
+  tablenames.append([title, fname])
   with file(fname, "w") as out:
     out.write(template.render(
       title=title,
@@ -80,7 +82,7 @@ torow = lambda l: [s.strip() for s in l.split(",")]
 with file("data.csv") as f:
   header = [s.capitalize() for s in torow(f.readline())]
   data = [torow(l) for l in f]
-  #data = [[i, str(random.randint(1800, 2000)), ("name-%d" % i), randgender(), "random description of person"] for i in xrange(40)]
+  data = [[i, str(random.randint(1800, 2000)), ("name-%d" % i), randgender(), "random description of person"] for i in xrange(40)]
   sorteddata = sorted(data, key=lambda d: int(d[1][:4]))
   print zip(*sorteddata)[1]
   random.shuffle(data)
@@ -92,11 +94,11 @@ females = [r for r in sorteddata if r[3] == "female"]
 
 
 tables = row_tables(header,data)
-write_tables("data-row.html", "Single Thread, Row Oriented", tables, template)
-write_tables("data-row.html", "Single Thread, Row Oriented (version 2)", tables, template)
-write_tables("data-row.html", "5 Threads, Row Oriented (version 2)", tables, template)
-write_tables("data-row.html", "10 Threads, Row Oriented (version 2)", tables, template)
-write_tables("data-row.html", "Single Thread, Row Oriented, Index", tables, template)
+write_tables("data-row-singlethread.html", "Single Thread, Row Oriented", tables, template)
+write_tables("data-row-singlethreadv2.html", "Single Thread, Row Oriented (version 2)", tables, template)
+write_tables("data-row-05thread.html", "5 Threads, Row Oriented (version 2)", tables, template)
+write_tables("data-row-10thread.html", "10 Threads, Row Oriented (version 2)", tables, template)
+write_tables("data-row-index.html", "Single Thread, Row Oriented, Index", tables, template)
 
 tables = []
 tables.extend(row_tables(header,males))
@@ -144,3 +146,7 @@ tables = [dict(
     rows = [["", ""] for i in xrange(12)])]
 write_tables("data-counts.html", "Counters Scratch Sheet", tables, template)
 
+
+with file("README2.md", "w") as out:
+  out.write("Directory of data sheets\n\n")
+  out.write("\n".join("* [%s](./%s)" % tuple(p) for p in tablenames))
