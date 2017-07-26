@@ -1,0 +1,46 @@
+<html>
+  <body>
+  <style>
+  body, td,th {
+    font-size: 16pt;
+    text-align: left;
+
+  }
+	th {
+		font-weight: bold;
+	}
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-after: always;
+  }
+	td, th {
+		padding: .5em;
+		border: 1px solid black;
+    min-height: 3em;
+    height: 3em;
+	}
+  small {
+    font-size: smaller;
+      color: gray;
+  }
+  </style>
+  {% for table in tables %}
+  <h2>{{title}}.  <small>Page {{loop.index}}</small></h2>
+  <table>
+    <tr>
+      {% for i in range(table.schema|count) %}
+        <th width='{{table.widths[i]}}%'>{{table.schema[i]}}</th>
+      {% endfor %}
+    </tr>
+    {% for row in table.rows %}
+      <tr>
+        {% for c in row %} <td>{{c}}</td> {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+  {% endfor %}
+  </body>
+</html>
+
+
