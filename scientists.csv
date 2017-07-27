@@ -1,0 +1,42 @@
+id,birthyear,name,gender,description
+1,1815,ada lovelace,female,first computer programmer
+2,1868,henrietta swan leavit,female,discovered evidence for universe expansion
+3,1906,grace hopper,female,"us navy rear admiral; developed first compiler; badass"
+4,1924,evelyn boyd granville,female,2nd african american woman to recieve PhD in math
+5,1934,joan ball,female,first person to start computer dating service
+6,1937,mary wilkes,female,first person to use a computer in a private home
+7,1913,mary kenneth keller,female,first american woman to earn a PhD in computer science
+8,1936,margaret hamilton,female,flight software prevented abort of Apollo 11 landing
+9,1926,erna hoover,female,invented computerized telephone switching
+10,1931,felizabeth feinler,female,defined DNS naming that manages .mil .gov .edu etc domain names
+11,1932,frances allen,female,first female Turing Awardee (nobel prize of computer science)
+12,1989,frances brazier,female,founder of netherland's first internet service provider
+13,1992,donna dubinsky,female,cofounder of Palm Inc
+14,1939,barbara liskov,female,winner of Turing Award (nobel prize of computer science)
+15,1994,sally floyd,female,invented TCP (protocol to communicate over the internet)
+16,1949,anita borg,female,founded Institute for Women and Technology
+17,1975,marissa mayer,female,ex-VP of search product and user experience at google; ex-CEO of Yahoo
+18,2005,mary lou jepson,female,founder and CTO of One Laptop Per Child
+19,2006,maria klawe,female,president of Harvey Mudd College
+20,1958,shafi goldwasser,female,two time recipient of Godel Prize; Turing Award winner
+21,1867,marie curie,female,only person to win Nobel Prize in two categories (physics+chemistry)
+22,1939,ada yonath,female,discovered ribosome
+23,1897,irene joliot-curie,female,discovered artificial (induced) radioactivity
+24,1930,tu youyou,female,discovered natural cure for malaria; saved millions of lives
+25,1918,harold amos,male,chaired harvard medical school
+26,1807,henry blair,male,invented spark plugs
+27,1831,paul du chaillu,male,explorer; discovered gorillas and african pygmy people
+28,1949,lonnie johnson,male,invented super soaker; nasa researcher
+29,1976,window snyder,female,Former Chief Security Something-Or-Other at Mozilla
+30,1964,leland d melvin,male,Astronaut; only human to catch a pass in the NFL and in space.
+31,1993,aaron cook,male,first standing double backflip
+32,0830,al-khwarizmi,male,invented the term 'algorithm'
+33,1847,george boole,male,invented boolean logic; basis of computers
+34,1923,edgar codd,male,invented foundations of databases
+35,1925,douglas engelbart,male,invented computer mouse
+36,1937,claude shannon,male,invented the 'bit'; defined 'information'
+37,1912,alan turing,male,founder of computer science and AI
+38,1820,florence nighttingale,female,founded modern nursing; statistician
+39,1878,lise meitner,female,discovered nuclear fission (splitting atoms)
+40,1950s,jeannette wing,female,director of data science institute at columbia
+41,1950s,julia hirschberg,female,chair of columbia computer science departments

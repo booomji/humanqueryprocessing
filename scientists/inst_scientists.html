@@ -1,0 +1,177 @@
+<html>
+  <body>
+  <style>
+  body, td,th {
+    font-size: 18pt;
+    text-align: left;
+
+  }
+	th {
+		font-weight: bold;
+	}
+  table {
+    width: 40%;
+    border-collapse: collapse;
+  }
+	.page {
+    page-break-after: always;
+	}
+	td, th {
+		padding: .5em;
+		border: 1px solid black;
+    min-height: 3em;
+    height: 3em;
+	}
+  </style>
+  
+<div class="page">
+	<h2>Single thread, row oriented</h2>
+	Remember: you are pretending to be a robot!  Follow the instructions closely, even if they seem unnecessary.
+
+	<ol>
+	<li>Start your timer
+	<li>Go row by row and cross out rows if the Gender is not female
+	<li>Go row by row; if the row is not crossed out,  write down birthyear's decade in the "Decades" scratch sheet if it is not already written down
+	<li>For each decade you wrote down:
+	<ol>
+		<li>	Create a counter starting at 0 on the "Counters" scratch sheet
+		<li>	Go row by row; if the row is not crossed out and the birthyear is in the same decade, then add 1 to the decade's counter 
+	</ol>
+  <li>Read through the "Counters" scratch sheet and write the decade with the biggest counter in the "Result" table below.
+	<li>Stop your timer and let Eugene know
+	</ol>
+	<table>
+	<tr><th>Result</th></tr>
+	<tr><td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div class="page">
+	<h2>Single thread, row oriented (version 2)</h2>
+	Remember: you are pretending to be a robot!  Follow the instructions closely, even if they seem unnecessary.
+
+	<ol>
+	<li>Start your timer
+	<li>Go row by row and cross out rows if the Gender is not female
+	<li>Go row by row; if the row is not crossed out, then:
+	<ol>
+		<li>If the birthyear's decade is not on the "Counters" page, write it down in a new row, and set its counter to 0
+		<li>Add 1 to the decade's counter
+	</ol>
+  <li>Read through the "Counters" scratch sheet and write the decade with the biggest counter in the "Result" table below.
+	<li>Stop your timer and let Eugene know
+	</ol>
+	<table>
+	<tr><th>Result</th></tr>
+	<tr><td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div class="page">
+	<h2>5 threads, row oriented (version 2)</h2>
+	Remember: you are pretending to be a robot!  Follow the instructions closely, even if they seem unnecessary.
+
+	<ol>
+	<li>Start your timer
+	<li>Give each member in your 5-person group one of the data pages, and a copy of each scratch sheet
+	<li>Go row by row and cross out rows if the Gender is not female
+	<li>Go row by row; if the row is not crossed out, then:
+	<ol>
+		<li>If the birthyear's decade is not on the "Counters" page, add a row for the decade
+		<li>Increment the counter for the row's decade by 1
+	</ol>
+  <li>Read through the "Counters" scratch sheet and write the decade with the biggest counter in the "Result" table below.
+	<li>Stop your timer and let Eugene know
+	</ol>
+	<table>
+	<tr><th>Result</th></tr>
+	<tr><td>&nbsp;</td></tr>
+	</table>
+</div>
+
+<div class="page">
+	<h2>10 threads, row oriented (version 2)</h2>
+	Remember: you are pretending to be a robot!  Follow the instructions closely, even if they seem unnecessary.
+
+	<ol>
+	<li>Start your timer
+	<li>Give each member in your 10-person group one of the data pages, and a copy of each scratch sheet
+	<li>Go row by row and cross out rows if the Gender is not female
+	<li>Go row by row; if the row is not crossed out, then:
+	<ol>
+		<li>If the birthyear's decade is not on the "Counters" page, add a row for the decade
+		<li>Increment the counter for the row's decade by 1
+	</ol>
+  <li>Read through the "Counters" scratch sheet and write the decade with the biggest counter in the "Result" table below.
+	<li>Stop your timer and let Eugene know
+	</ol>
+	<table>
+	<tr><th>Result</th></tr>
+	<tr><td>&nbsp;</td></tr>
+	</table>
+</div>
+
+
+
+<div class="page">
+	<h2>Single thread, col oriented</h2>
+	Remember: you are pretending to be a robot!  Follow the instructions closely, even if they seem unnecessary.
+
+	<ol>
+	<li>Start your timer
+	<li>Take the Gender and Birthyear data sheets
+	<li>Go row by row in the Gender sheet and cross out rows if the Gender is not female.  Also cross out the corresponding row in the Birthyear sheet.
+	<li>Go row by row in the Birthyear data sheet; if the row is not crossed out, then:
+	<ol>
+		<li>If the decade is not on the "Counters" page, add a row for the decade
+		<li>Increment the counter for the row's decade by 1
+	</ol>
+  <li>Read through the "Counters" scratch sheet and write the decade with the biggest counter in the "Result" table below.
+	<li>Stop your timer and let Eugene know
+	</ol>
+	<table>
+	<tr><th>Result</th></tr>
+	<tr><td>&nbsp;</td></tr>
+	</table>
+</div>
+
+
+<div class="page">
+	<h2>Single thread, row oriented, sorted on gender and birthyear</h2>
+	Remember: you are pretending to be a robot!  Follow the instructions closely, even if they seem unnecessary.
+
+	<ol>
+	<li>Start your timer
+	<li>Find the rows where the Gender is female
+	<li>Go through the female rows one by one, and:
+	<ol>
+		<li>If the birthyear's decade is not on the "Counters" page, add a row for the decade
+		<li>Increment the counter for the row's decade by 1
+	</ol>
+  <li>Read through the "Counters" scratch sheet and write the decade with the biggest counter in the "Result" table below.
+	<li>Stop your timer and let Eugene know
+	</ol>
+	<table>
+	<tr><th>Result</th></tr>
+	<tr><td>&nbsp;</td></tr>
+	</table>
+</div>
+
+
+<div class="page">
+	<h2>Single thread, row oriented, indexed</h2>
+	Remember: you are pretending to be a robot!  Follow the instructions closely, even if they seem unnecessary.
+
+	<ol>
+	<li>Start your timer
+	<li>The Index data sheet contains a table containing the row ids for each pair of gender and birthyear decade.
+	<li>Look through the rows in the Index and cross out the rows where the gender is male
+  <li>For the rows that are not crossed out, count the number of ids for each decade.  
+  <li>Write down the decade with the biggest number of ids in the "Result" table below
+	<li>Stop your timer and let Eugene know
+	</ol>
+	<table>
+	<tr><th>Result</th></tr>
+	<tr><td>&nbsp;</td></tr>
+	</table>
+</div>
