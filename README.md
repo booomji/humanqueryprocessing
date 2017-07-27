@@ -15,7 +15,8 @@ Discussion Notes
   * What games do they like to play?  Why?
   * Which one is the best?  Most popular?  Why?
   * How would they figure it out?
-  * Hhat year had the most popular games?  
+  * What year had the most popular games?  
+  * Make sure they know what a decade is; what an ID is; what a table is
   * What if I gave them data to answer these questions?  What would the data look like?
 		* work towards a table
 1. For older kids

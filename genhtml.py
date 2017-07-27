@@ -85,12 +85,12 @@ with file("games.csv") as f:
   header = [s.capitalize() for s in torow(f.readline())]
   data = [torow(l) for l in f]
   #data = [[i, str(random.randint(1800, 2000)), ("name-%d" % i), randgender(), "random description of person"] for i in xrange(40)]
-  data = [[i,
-    ("game-%d" % i),
-    ("developer-%d" % i), 
-    ("publisher-%d" % i), 
-    ("10-Jan-%02d" % (random.randint(0, 17))), 
-    random.randint(1, 30)*1000000] for i in xrange(40)]
+  #data = [[i,
+  #  ("game-%d" % i),
+  #  ("developer-%d" % i), 
+  #  ("publisher-%d" % i), 
+  #  ("10-Jan-%02d" % (random.randint(0, 17))), 
+  #  random.randint(1, 30)*1000000] for i in xrange(40)]
   for d in data:
     year = int(d[4][-2:])
     if year < 20: year += 2000
