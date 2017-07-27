@@ -27,6 +27,8 @@ def split_rows(rows, blocksize=9):
 
 def row_tables(header, data):
   widths = [5, 15, 25, 10, 45]
+  widths = [5, 20, 20, 15, 25, 15]
+
   rowblocks = split_rows(data, 9)
 
   tables = []
@@ -79,11 +81,24 @@ with file("template.html") as tf:
 randgender = lambda: list(["female", "male"])[random.randint(0,1)]
 
 torow = lambda l: [s.strip() for s in l.split(",")]
-with file("data.csv") as f:
+with file("games.csv") as f:
   header = [s.capitalize() for s in torow(f.readline())]
   data = [torow(l) for l in f]
-  data = [[i, str(random.randint(1800, 2000)), ("name-%d" % i), randgender(), "random description of person"] for i in xrange(40)]
-  sorteddata = sorted(data, key=lambda d: int(d[1][:4]))
+  #data = [[i, str(random.randint(1800, 2000)), ("name-%d" % i), randgender(), "random description of person"] for i in xrange(40)]
+  data = [[i,
+    ("game-%d" % i),
+    ("developer-%d" % i), 
+    ("publisher-%d" % i), 
+    ("10-Jan-%02d" % (random.randint(0, 17))), 
+    random.randint(1, 30)*1000000] for i in xrange(40)]
+  for d in data:
+    year = int(d[4][-2:])
+    if year < 20: year += 2000
+    else: year += 1900
+    d[-2] = d[-2][:-2] + str(year)
+
+  sorteddata = data 
+  #sorteddata = sorted(data, key=lambda d: int(d[1][:4]))
   print zip(*sorteddata)[1]
   random.shuffle(data)
   for i, d in enumerate(data):
@@ -94,26 +109,30 @@ females = [r for r in sorteddata if r[3] == "female"]
 
 
 tables = row_tables(header,data)
-write_tables("data-row-singlethread.html", "Single Thread, Row Oriented", tables, template)
-write_tables("data-row-singlethreadv2.html", "Single Thread, Row Oriented (version 2)", tables, template)
-write_tables("data-row-05thread.html", "5 Threads, Row Oriented (version 2)", tables, template)
-write_tables("data-row-10thread.html", "10 Threads, Row Oriented (version 2)", tables, template)
-write_tables("data-row-index.html", "Single Thread, Row Oriented, Index", tables, template)
+write_tables("data-row.html", "Data table", tables, template)
 
 tables = []
 tables.extend(row_tables(header,males))
 tables.extend(row_tables(header,females))
-write_tables("data-row-sorted.html", "Single Thread, Row Oriented, Sorted on Gender and Birthyear", tables, template)
+write_tables("data-row-sorted.html", "Data table sorted on Gender and Birthyear", tables, template)
 
 
 tables = columnar_tables(header,data)
-write_tables("data-col.html", "Single thread, Col Oriented", tables, template)
+write_tables("data-col.html", "Data table (columnar)", tables, template)
 
 
 # make the index
 index = defaultdict(lambda: [None, list()])
 for d in data:
-  decade = (d[3], int(int(d[1][:4]) / 10) * 10)
+  #decade = (d[3], int(int(d[1][:4]) / 10) * 10)
+
+  year = int(d[4][-2:])
+  if year < 20: year += 2000
+  else: year += 1900
+  year = int(int(year) / 10) * 10
+  sold = int(d[-1]) > 20000000
+  decade = (str(sold), str(year))
+
   index[decade][0] = decade
   index[decade][1].append(d[0])
 rows = []
@@ -123,7 +142,8 @@ rows.sort()
 tables = []
 for block in split_rows(rows, 12):
   tables.append(dict(
-    schema=["Gender", "Decade", "Ids"],
+    #schema=["Gender", "Decade", "Ids"],
+    schema=["More than 20 Million Sold", "Decade", "Ids"],
     widths=[20, 20, 60],
     rows=block))
 write_tables("data-index.html", "Index Data Sheet", tables, template)
@@ -145,6 +165,7 @@ tables = [dict(
     widths=[20, 80],
     rows = [["", ""] for i in xrange(12)])]
 write_tables("data-counts.html", "Counters Scratch Sheet", tables, template)
+write_tables("data-counts-master.html", "Master Counters Scratch Sheet", tables, template)
 
 
 with file("README2.md", "w") as out:

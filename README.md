@@ -11,6 +11,14 @@ Discussion Notes
 
 1. Beginning: Ask what students know about computer science or data science
   * How is it used in the world?
+1. For younger kids
+  * What games do they like to play?  Why?
+  * Which one is the best?  Most popular?  Why?
+  * How would they figure it out?
+  * Hhat year had the most popular games?  
+  * What if I gave them data to answer these questions?  What would the data look like?
+		* work towards a table
+1. For older kids
   * Discussion centered around starting a sneaker company.   What can computer science help with?  Eventually steer towards needs to run database queries.
     * Start a sneaker company, get endorsements from cool scientists.  How do you sell the sneakers?
     * go door to door?
@@ -19,8 +27,8 @@ Discussion Notes
     * who's even buying the sneakers?   steph curries vs lebrons.
       * east vs west coast?  how do you know?
       * advertise curries to east coasters? maybe there's curry fans in cleveland?  
-2. Counting and asking questions is important.  But how can we make it fast?  exercise below
-3. Post-exercise discussion
+1. Counting and asking questions is important.  But how can we make it fast?  exercise below
+1. Post-exercise discussion
 
 # Exercise
 
@@ -40,6 +48,5 @@ Overview
         ORDER BY count(*)
         LIMIT 1
 
-* See [instructions.html](instructions.html) for each query execution strategy
-* See [fakedata/](./fakedata/) for data sheets using made-up data for students to get aquainted with the instructions.
-* See [realdata/](./realdata/) for data sheets using real data from [data.csv](./data.csv)
+* See [./scientists](./scientists/) for exercises using dataset of scientists
+* See [./games](./games/) for exercises using dataset of top video games
